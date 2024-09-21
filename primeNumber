@@ -1,0 +1,23 @@
+def primeNumber(start,end):
+    pr=[]
+    if start>end or start<=0 or end<=0:
+        print('Provide valid input')
+        return
+    if start==1:
+        start+=1
+    for i in range(start,end+1):
+        prime=True
+        for j in range(2,(i//2)+1):
+            if i%j==0:
+                prime=False
+                break
+        if prime:
+            pr.append(i)
+    if pr:
+        return pr
+    else:
+        return None
+    
+start=int(input('Enter the starting number : '))
+end=int(input('Enter the ending number : '))
+print(primeNumber(start,end))

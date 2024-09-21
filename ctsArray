@@ -1,0 +1,11 @@
+def ctsArray(arr):
+    l1=[]
+    i=0
+    res=1
+    for ele in arr:
+        res*=ele
+    for ele in arr:
+        l1.append(res//ele)
+    return l1
+arr=list(map(int,input('Enter the array elements: ').split()))
+print(ctsArray(arr))

@@ -1,0 +1,9 @@
+def stringReverse(s):
+    words=s.split()
+    words.reverse()
+    output=''
+    for ele in words:
+        output+=' '+ele
+    return output
+s=input('Enter the string : ')
+print(stringReverse(s))

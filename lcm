@@ -1,0 +1,10 @@
+def lcm(n1,n2):
+    small=min(n1,n2)
+    while True:
+        if small%n1==0 and small%n2==0:
+            lc=small
+            return lc
+        small+=1
+n1=int(input('Enter first number : '))
+n2=int(input('Enter second number : '))
+print(lcm(n1,n2))

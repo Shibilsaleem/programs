@@ -1,0 +1,8 @@
+from collections import Counter
+def maxRepeated(s):
+    mydict=Counter(s)
+    for key,val in mydict.items():
+        if val==max(mydict.values()):
+            return key
+s=input('Enter the string : ')
+print(maxRepeated(s))

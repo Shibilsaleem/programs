@@ -1,0 +1,15 @@
+def armstrongNumber(k):
+    result=[]
+    for i in range(1,k):
+        su=0
+        n=len(str(i))
+        number=i
+        while i!=0:
+            digit=i%10
+            i//=10
+            su+=digit**n
+        if su==number:
+            result.append(number)
+    return result
+n=int(input('Enter the limit : '))
+print(armstrongNumber(n))

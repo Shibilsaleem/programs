@@ -1,0 +1,14 @@
+def has9(l1):
+    ct=0
+    
+    for number in l1:
+        exists=False
+        for digit in number:
+            if digit=='9':
+                exists=True
+                break
+        if exists:
+            ct+=1
+    return ct
+l1=['123', '678', '908', '69', '12', '097']
+print(has9(l1))

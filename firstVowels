@@ -1,0 +1,16 @@
+def firstVowels(s):
+    vowels=['a','e','i','o','u']
+    s=s.lower()
+    count=i=0
+    while i<len(s):
+        if s[i] in vowels:
+            count+=1
+            i+=1
+        while i<len(s) and s[i] in vowels:
+            count+=1
+            i+=1
+        return count
+    return -1
+s=input('Enter the input : ')
+print(firstVowels(s))
+        

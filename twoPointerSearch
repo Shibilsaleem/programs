@@ -1,0 +1,13 @@
+def TPSearch(arr,target):
+    l=0
+    r=len(arr)-1
+    while True:
+        if arr[l]+arr[r]==target:
+            return (l,r)
+        elif arr[l]+arr[r]<target:
+            l+=1
+        else:
+            r-=1
+arr=list(map(int,input('Enter the numbers : ').split()))
+k=int(input('Enter the target : '))
+print(TPSearch(arr,k))

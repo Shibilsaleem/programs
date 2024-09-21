@@ -1,0 +1,29 @@
+def leapYear(year):
+    if (int(year)%4==0 and int(year)%100!=0) or int(year)%400==0:
+        return True
+def remDays(day,month,year):
+    days=0
+    l1=[4,6,9,11]
+    for i in range(1,int(month)):
+        if i==2:
+            if leapYear(i):
+                days+=29
+            else:
+                days+=28
+        elif i==8:
+            days+=31
+        elif i in l1:
+            days+=30
+        else:
+            days+=31
+    days+=int(day)
+    if leapYear(year):
+        res=366-days
+        return res
+    else:
+        res=365-days
+        return res
+day=input('Enter the day : ')
+month=input('Enter the month : ')
+year=input('Enter the year : ')
+print(remDays(day,month,year))

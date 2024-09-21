@@ -1,0 +1,16 @@
+def anagram(arr):
+    mydict={}
+    res=[]
+    for i in range(len(arr)):
+        word=''.join(sorted(arr[i]))
+        if word not in mydict:
+            mydict[word]=[i]
+        else:
+            mydict[word].append(i)
+    for val in mydict.values():
+        res.append((val))
+    return res
+    
+    
+arr=list(map(str,input('Input :').split()))
+print(anagram(arr))

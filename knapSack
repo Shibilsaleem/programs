@@ -1,0 +1,24 @@
+def knapSack(cap,arr):
+    profit=0
+    selected=[]
+    if cap<=0:
+        return 0
+    arr.sort(key=lambda x:x['ratio'],reverse=True)
+    for ele in arr:
+        if ele['weight']<=cap:
+            profit+=ele['value']
+            cap-=ele['weight']
+            selected.append(f"Item {ele['item']} (Full)")
+        else:
+            portion=cap/ele['weight']
+            profit+=ele['value']*portion
+            cap=0
+            selected.append(f"Item {ele['item']} {portion} of it")
+    return selected 
+cap=int(input('Enter the capacity of the knapsack : '))
+arr=[{"item": 1,"weight": 5,"value": 30,"ratio": 6},
+     {"item": 2, "weight": 10, "value": 40, "ratio": 4},
+    {"item": 3, "weight": 15, "value": 45, "ratio": 3},
+    {"item": 4, "weight": 22, "value": 77, "ratio": 3.5},
+    {"item": 5, "weight": 25, "value": 90, "ratio": 3.6}]
+print(knapSack(cap,arr))

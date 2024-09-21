@@ -1,0 +1,9 @@
+def extractNumbers(s):
+    l1=s.split()
+    numbers=[]
+    for ele in l1:
+        if ele.isdigit():
+            numbers.append(ele)
+    return numbers
+s=input('Enter the input : ')
+print(extractNumbers(s))

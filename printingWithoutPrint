@@ -1,0 +1,5 @@
+def displayWithoutPrint():
+    s1='Hello'
+    s2='World!'
+    return s1+' '+s2
+print(displayWithoutPrint())

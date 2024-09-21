@@ -1,0 +1,9 @@
+def camelCase(s):
+    for i,ele in enumerate(s):
+        if i%2==0:
+            s=s.replace(ele,ele.upper())
+        else:
+            s=s.replace(ele,ele.lower())
+    return s
+s=input('Enter the string : ')
+print(camelCase(s))

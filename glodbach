@@ -1,0 +1,17 @@
+def prime(n):
+    for i in range(2,(n//2)+1):
+        if n%i==0:
+            return False
+    return True
+def goldBach(s,e): 
+    if s%2!=0:
+        s+=1
+    for i in range(s,e,2):
+        for j in range(s-2,1,-1):
+            if prime(j) and prime(i-j):
+                print(i,'=',j,'+',i-j)
+                break
+
+start=int(input('Enter the starting range : '))
+end=int(input('Enter the ending index : '))
+print(goldBach(start,end))

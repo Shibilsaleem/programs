@@ -1,0 +1,13 @@
+def triangularNumber(n):
+    i=largest=0
+    while i<=n:
+        if (i*(i+1))/2>largest and (i*(i+1))/2<n:
+            largest=(i*(i+1))//2
+        i+=1
+    return largest
+n=int(input('Enter the number : '))
+print(triangularNumber(n))
+
+
+
+ 

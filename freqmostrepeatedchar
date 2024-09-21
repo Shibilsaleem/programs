@@ -1,0 +1,7 @@
+from collections import Counter
+def frequency(s):
+    mydict=Counter(s)
+    repeated=max(mydict.values())
+    return repeated
+s=input('Enter the string : ')
+print(frequency(s))

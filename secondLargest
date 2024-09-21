@@ -1,0 +1,9 @@
+def secondLargest(arr):
+    i=0
+    largest=max(arr)
+    s1=set(arr)
+    s1.remove(largest)
+    slargest=max(s1)
+    return slargest
+arr=list(map(int,input('Enter the list : ').split()))
+print(secondLargest(arr))

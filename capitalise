@@ -1,0 +1,11 @@
+def capitalise(s,character):
+    newstring=''
+    for char in s:
+        if char==character:
+            newstring+=char.upper()
+        else:
+            newstring+=char
+    return newstring
+s=input('Enter the string : ')
+character=input('Enter the letter : ')
+print(capitalise(s,character))

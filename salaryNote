@@ -1,0 +1,19 @@
+def salaryNote(arr):
+    count=0
+    note=min(arr)
+    for salary in arr:
+        if salary%note!=0:
+            arr.remove(salary)
+            while salary%note!=0:
+                salary-=1
+            arr.append(salary)
+            
+    print(arr)
+    for i in range(len(arr)):
+        for j in range((max(arr)//2)+1):
+            if note*j==arr[i]:
+                count+=j
+
+    return count
+arr=list(map(int,input('Enter the salaries  : ').split()))
+print(salaryNote(arr))

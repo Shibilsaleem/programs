@@ -1,0 +1,13 @@
+def summaryRange(nums):
+    i=0
+    j=1
+    output=[]
+    while i<(len(nums)):
+        start=nums[i]
+        if nums[i]+1!=nums[j]:
+            i+=1
+            j+=1
+            output.append(start)
+        else:
+            i+=1
+            j+=1

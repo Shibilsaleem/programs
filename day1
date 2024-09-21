@@ -1,0 +1,23 @@
+def test(arr):
+    large=max(arr)
+    for ele in arr:
+        if ele==large:
+            arr.remove(large)
+    nlarge=max(arr)
+    print(arr)
+    small=min(arr)
+    for ele in arr:
+        if ele==small:
+            arr.remove(small)
+    nsmall=min(arr)
+   
+    res=nlarge-nsmall
+    for i in range(2,(res//2)+1):
+        if res%i==0:
+            string='Lose'
+            return string
+        else:
+            string='Win'
+            return string
+arr=list(map(int,input('Enter the input : ').split()))
+print(test(arr))

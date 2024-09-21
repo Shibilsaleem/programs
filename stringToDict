@@ -1,0 +1,6 @@
+from collections import Counter
+def stringToDict(s):
+    l1=s.split(',')
+    return Counter(l1)
+s=input('Enter the input : ')
+print(stringToDict(s))

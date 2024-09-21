@@ -1,0 +1,27 @@
+def bandWballs(n1,n2):
+    n3=''
+    temp='W'
+    for i in range(len(n1)):
+        if n1[i]=='W' and n2[i]=='W':
+            n3+='B'
+        elif n1[i]=='B' and n2[i]=='B':
+            n3+='W'
+        elif n1[i]=='W' and n2[i]=='B':
+            if temp[-1]=='B':
+                n3+='W'
+                temp+='W'
+            else:
+                n3+='B'
+                temp+='B'
+
+        else:
+            if temp[-1]=='W':
+                n3+='B'
+                temp+='B'
+            else:
+                n3+='W'
+                temp+='W'
+    return n3
+n1=input('Enter the string 1 : ')
+n2=input('Enter the string 2 :')
+print(bandWballs(n1,n2))

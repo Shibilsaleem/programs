@@ -1,0 +1,22 @@
+def closestToZero(arr):
+    posve=float('inf')
+    negve=float('-inf')
+    for ele in arr:
+        if ele>0 and ele<posve:
+            posve=ele
+        if ele<0 and ele>negve:
+            negve=ele
+    if posve+negve==0:
+        return posve
+    for i in range(10):
+        if posve-i==0:
+            dec=i
+        if negve+i==0:
+            inc=i
+    if inc<dec:
+        return negve
+    else:
+        return posve
+arr=list(map(int,input('Input : ').split()))
+print(closestToZero(arr))
+    

@@ -1,0 +1,8 @@
+def occurOnce(arr):
+    result=[]
+    for ele in arr:
+        if arr.count(ele)==1:
+            result.append(ele)
+    return result
+arr=eval(input('Enter the list of numbers : '))
+print(occurOnce(arr))

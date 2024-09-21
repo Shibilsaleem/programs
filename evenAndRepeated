@@ -1,0 +1,14 @@
+from collections import Counter
+def removeEven(a):
+    mydict=Counter(a)
+    for number in a:
+        if number%2==0:
+            a.remove(number)
+    s1=set(a)
+    for key,val in mydict.items():
+        if val>1:
+            s1.remove(key)
+    a=list(s1)
+    return len(a)
+array=list(map(int,input('Enter the numbers :').split()))
+print(removeEven(array))

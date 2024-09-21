@@ -1,0 +1,4 @@
+def invertedRightTriangle(n):
+    for i in range(n,0,-1):
+        print(' '*(n-i)+'*'*i)
+print(invertedRightTriangle(6))

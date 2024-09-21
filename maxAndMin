@@ -1,0 +1,11 @@
+def maxAndMin(arr):
+    small=arr[0]
+    large=arr[0]
+    for ele in arr:
+        if ele<small:
+            small=ele
+        if ele>large:
+            large=ele
+    return small,large
+arr=list(map(int,input('Enter the array of nubers : ').split()))
+print(maxAndMin(arr))

@@ -1,0 +1,21 @@
+def reverse(s,k):
+    i=j=0
+    p=k
+    news=''
+    while p<len(s):
+        ts=s[i:p]
+        if j%2==0:
+            news+=ts[::-1]
+            j+=1
+            p+=k
+            i+=k
+        else:
+            news+=ts
+            j+=1
+            p+=k
+            i+=k
+    news+=s[i:]
+    return news
+s=input('Enter the string : ')
+k=int(input('Enter the blocks of letters that has to be reversed alternately : '))
+print(reverse(s,k))

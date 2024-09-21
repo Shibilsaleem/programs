@@ -1,0 +1,14 @@
+def consonants(a):
+    vowels=['a','e','i','o','u','A','E','I','O','U']
+    ct=0
+    for word in a:
+        all_consonants=True
+        for char in word:
+            if char in vowels:
+                all_consonants=False
+                break
+        if all_consonants:
+            ct+=1
+    return ct
+a=list(map(str,input('Enter the array of strings : ').split()))
+print(consonants(a))

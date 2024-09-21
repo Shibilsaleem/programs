@@ -1,0 +1,24 @@
+def balancedParanthesis(n):
+    stack=[]
+    opening=['[','{','(']
+    for bracket in n:
+        if bracket in opening:
+            stack.append(bracket)
+        else:
+            if not stack:
+                return False
+            popped=stack.pop()
+            if popped=='[':
+                if bracket!=']':
+                    return False
+            if popped=='{':
+                if bracket!='}':
+                    return False
+            if popped=='(':
+                if bracket!=')':
+                    return False
+    if stack:
+        return False
+    return True
+n='[{}()]'
+print(balancedParanthesis(n))

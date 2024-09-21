@@ -1,0 +1,5 @@
+def onevanna2(n):
+    res=(n%2)+1
+    return res
+n=int(input('Enter input (1/2) : '))
+print(onevanna2(n))

@@ -1,0 +1,10 @@
+def sort(arr):
+    
+    sortedd=[]
+    while arr:
+        small=min(arr)
+        arr.remove(small)
+        sortedd.append(small)
+    return sortedd
+arr=list(map(int,input('Enter the numbers to be sorted : ').split()))
+print(sort(arr))

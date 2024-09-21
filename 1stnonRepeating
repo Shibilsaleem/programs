@@ -1,0 +1,8 @@
+from collections import Counter
+def nonRepeating(s):
+    for key,val in Counter(s).items():
+        if val==1:
+            ind=s.index(key)
+            return (key,ind)
+s=input('Enter the string : ')
+print(nonRepeating(s))

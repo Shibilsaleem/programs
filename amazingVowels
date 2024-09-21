@@ -1,0 +1,12 @@
+def amazingSubstring(s,t):
+    vowels=['a','e','i','o','u','A','E','I','O','U']
+    if t[0] not in vowels:
+        return 0
+    if t in s:
+        return True
+    else:
+        return False
+    
+s=input('Enter the string : ')
+t=input('Enter the substring : ')
+print(amazingSubstring(s,t))
